@@ -78,8 +78,8 @@ const extractBiggest = (list) => {
 
 const result = [];
 
-for (let i = 0; i < 15; i++) {
-	const [name, list] = data.lists[i % data.lists.length];
+for (let i = 0; i < 15; i) {
+	const [name, list] = data.lists[i data.lists.length];
 	const biggestValue = extractBiggest(list);
 	result.push(biggestValue);
 }
