@@ -1,0 +1,109 @@
+// Challenge 1
+
+/**
+ * // scripts.js
+
+const data = {
+	lists: [
+		['first', [15, 11, 13, 7, 5]],
+		['second', [2, 6, 8, 4, 14, 12, 10]],
+		['third', [9, 3, 1]],
+	]
+}
+
+// Only edit below
+
+const { first = 1 } = data.first || {}
+const { second = 1 } = data.second || {}
+const { third = 1 } = data.third || {}
+
+const result = []
+
+const extractBiggest = () => {
+	if (first[-1] > second[-1]) {
+		return first
+	}
+
+	if (third[-1] < 1) {
+		return second
+	}
+	
+	return third
+}
+
+// Only edit above
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+console.log(result)
+ * 
+ */
+
+//SOLUTION
+
+const data = {
+	lists: [
+		['first', [15, 11, 13, 7, 5]],
+		['second', [2, 6, 8, 4, 14, 12, 10]],
+		['third', [9, 3, 1]],
+	],
+};
+
+// Only edit below
+
+const extractBiggest = (list) => {
+	if (list.length === 0) {
+		return 1; // If the list is empty, return 1 as per your original code
+	}
+	return Math.max(...list);
+};
+
+// Only edit above
+
+const result = [];
+
+for (let i = 0; i < 15; i++) {
+	// Extract the list and its name from the 'data' object
+	const [name, list] = data.lists[i % data.lists.length];
+	const biggestValue = extractBiggest(list);
+	result.push(biggestValue);
+}
+
+// Only edit above
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+
+console.log(result)
+
