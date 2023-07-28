@@ -69,7 +69,7 @@ const data = {
 
 const extractBiggest = (list) => {
 	if (list.length === 0) {
-		return 1; // If the list is empty, return 1 as per your original code
+		return 1; // 
 	}
 	return Math.max(...list);
 };
@@ -79,7 +79,6 @@ const extractBiggest = (list) => {
 const result = [];
 
 for (let i = 0; i < 15; i++) {
-	// Extract the list and its name from the 'data' object
 	const [name, list] = data.lists[i % data.lists.length];
 	const biggestValue = extractBiggest(list);
 	result.push(biggestValue);
